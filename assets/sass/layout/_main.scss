@@ -1,26 +1,20 @@
 /* Hero Section
  ========================================================================== */
-.hero-section__featured-image {
-  width: 50%;
-  height: 700px;
-
+ .hero-section__featured-image {
+  display: none;
   background-image: url(../images/main-image.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.hero-section__container {
-  width: 50%;
-
-}
-
 .hero-section__main-content {
-  height: 500px;
-  padding: 80px 110px;
+  padding: 1.3em 3em;
 
   h1 {
     margin: 0;
+    @include relative-converter-rem(font-size, rem, 45, 16);
+
   }
 
   p {
@@ -34,12 +28,9 @@
 
 .hero-section__info_small,
 .hero-section__info_medium  {
-  height: 200px;
-  padding: 50px 30px;
-
   a {
     font-family: $alfa-slab;
-    font-size: $large;
+    @include relative-converter-rem(font-size,rem,$large,16);
   }
 
   p {
@@ -48,8 +39,6 @@
 }
 
 .hero-section__info_small {
-  width: 40%;
-
   background-color: $pearl-aqua;
 
   a {
@@ -62,10 +51,7 @@
 }
 
 .hero-section__info_medium {
-  width: 60%;
-  display: inline-block;
   background-color: $raspberry-pink;
-  padding-left: 80px;
 
   a {
     color: $white;
@@ -80,111 +66,181 @@
   }
 }
 
-/* History Section
+/* History & About Sections
  ========================================================================== */
-.history-section {
-  height: 500px;
-  padding-left: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
+.history-section,
+.about-section {
+  padding: 1.3em 3em; 
 
-.history-section__image {
-  width: 30%;
-
-  img {
-    height: 400px;
+  h2 {
+    @include relative-converter-rem(font-size, rem, 30, 16);
   }
 }
 
-.history-section__content {
-  display: inline-block;
-  width: 70%;
-  padding-top: 10px;
-  padding-right: 200px;
+.history-section__content,
+.about-section__content {
+  padding-top: 1em;
 
   p {
-    padding-top: 10px;
-    padding-right: 100px;
+    padding: 1em;
   }
 }
 
-.history-section__button {
-  padding-top: 10px;
-}
-
-/* About Section
- ========================================================================== */
 .about-section {
-  height: 500px;
-  padding-left: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
   background-color: $raspberry-pink;
   color: $white;
 }
 
-.about-section__content {
-
-  width: 50%;
-  padding-top: 10px;
-
-  p {
-    padding-top: 10px;
-    padding-right: 50px;;
-  }
-}
-
-.about-section__button {
-  padding-top: 10px;
-}
-
-.about-section__image {
-  padding-left: 60px;
-
-  width: 50%;
-
-  img {
-    width: 500px;
-  }
-}
-
-/* Gallery Section
- ========================================================================== */
-.gallery-section {
-  height: 400px;
-  padding-top: 50px;
-  text-align: center;
-}
-
-.gallery-section__wrapper {
-  display: inline-block;
-  padding-top: 30px;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-.gallery-section__image {
-  width: 25%;
-  padding-left: 10px;
-  padding-right: 10px;
-
-  img {
-    height: 200px;
-  }
-}
 
 /* News Section
  ========================================================================== */
 .news-section {
-  height: 650px;
-  padding-top: 50px;
-  padding-left: 50px;
+  padding: 2em 3em .5em 3em;
   background-color: $pearl-aqua;
 
   h2 {
-    padding-bottom: 20px;
-    text-align: center;
+    padding-bottom: .5em;
     color: $white;
   }
+}
+
+
+ @media only screen and (min-width: 1200px) {
+
+  .hero-section__featured-image {
+    width: 50%;
+    @include relative-converter-rem(height, em, 700, 16);
+  }
+  
+  .hero-section__container {
+    width: 50%;
+
+  }
+  
+  .hero-section__main-content {
+    @include relative-converter-rem(height, em, 500, 16);
+    padding: 80px 110px;
+  }
+  
+  .hero-section__info_small,
+  .hero-section__info_medium  {
+    @include relative-converter-rem(height, em, 200, 16);
+    padding: 50px 30px;
+    width: 40%;
+
+    p {
+      padding-top: 10px;
+    }
+  }
+  
+  .hero-section__info_medium {
+    width: 60%;
+    display: inline-block;
+    padding-left: 80px;
+  }
+  
+  /* History Section
+   ========================================================================== */
+  .history-section {
+    height: 500px;
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .history-section__image {
+    width: 30%;
+  
+    img {
+      height: 400px;
+    }
+  }
+  
+  .history-section__content {
+    display: inline-block;
+    width: 70%;
+    padding-top: 10px;
+    padding-right: 200px;
+  
+    p {
+      padding-top: 10px;
+      padding-right: 100px;
+    }
+  }
+  
+  .history-section__button {
+    padding-top: 10px;
+  }
+  
+  /* About Section
+   ========================================================================== */
+  .about-section {
+    @include relative-converter-rem(height, em, 500, 16);
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .about-section__content {
+  
+    width: 50%;
+    padding-top: 10px;
+  
+    p {
+      padding-top: 10px;
+      padding-right: 50px;;
+    }
+  }
+  
+  .about-section__button {
+    padding-top: 10px;
+  }
+  
+  .about-section__image {
+    padding-left: 60px;
+  
+    width: 50%;
+  
+    img {
+      @include relative-converter-rem(width, em, 500, 16);
+    }
+  }
+  
+  /* Gallery Section
+   ========================================================================== */
+  .gallery-section {
+    height: 400px;
+    padding-top: 50px;
+    text-align: center;
+  }
+  
+  .gallery-section__wrapper {
+    display: inline-block;
+    padding-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .gallery-section__image {
+    width: 25%;
+    padding-left: 10px;
+    padding-right: 10px;
+  
+    img {
+      height: 200px;
+    }
+  }
+  
+  /* News Section
+   ========================================================================== */
+  .news-section {
+    height: 650px;
+    padding-top: 50px;
+    padding-left: 50px;
+  
+    h2 {
+      text-align: center;
+    }
+  }
+  
 }

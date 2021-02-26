@@ -1,6 +1,12 @@
 /* Header Layout
  ========================================================================== */
 .header {
-  display: inline-block;
-  width: 100%;
+  display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  .header {
+    display: inline-block;
+    width: 100%;
+  }
 }

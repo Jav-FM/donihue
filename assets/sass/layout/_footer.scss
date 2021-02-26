@@ -1,31 +1,46 @@
 /* Footer Layout
    ========================================================================== */
-.footer {
-  height: 150px;
-  position: relative;
-  background-color: $black;
-}
 
-.footer__logo {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-}
-
-.footer__container {
-  padding-top: 60px;
-  text-align: center;
-
-  small {
-    display: inline-block;
-    margin-top: 20px;
-    color: $white;
+     .footer {
+    position: relative;
+    padding: 1.3em 3 em;
+    background-color: $black;
   }
-}
 
-.social-navigation {
-  margin-right: 10px;
-  font-size: 30px;
-  color: $white;
+  .footer__container {
+    small {
+      color: $white;
+    }
+  }
 
+  .social-navigation {
+    font-size: 2.3em;
+    color: $white;
+
+  }
+
+@media only screen and (min-width: 1200px) {
+  
+  .footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer__logo {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+  }
+
+  .footer__container {
+    text-align: center;
+    small {
+      display: inline-block;
+    }
+  }
+
+  .social-navigation {
+    margin-right: 10px;
+
+  }
 }
