@@ -1,7 +1,6 @@
 /* Hero Section
  ========================================================================== */
  .hero-section__featured-image {
-  display: none;
   background-image: url(../images/main-image.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -105,18 +104,13 @@
 }
 
 
+
  @media only screen and (min-width: 1200px) {
 
   .hero-section__featured-image {
-    width: 50%;
     @include relative-converter-rem(height, em, 700, 16);
   }
-  
-  .hero-section__container {
-    width: 50%;
 
-  }
-  
   .hero-section__main-content {
     @include relative-converter-rem(height, em, 500, 16);
     padding: 80px 110px;
